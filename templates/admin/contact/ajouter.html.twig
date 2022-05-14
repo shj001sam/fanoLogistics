@@ -1,0 +1,30 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Ajout Info page Contact{% endblock %}
+
+{% block body %}
+ {{form_start(form)}}
+
+        <div class="container">
+            <h1>Modifier les informations de la page de contact</h1>
+            
+            <div class="mb-3">
+                {{ form_row(form.adress) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(form.email) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(form.number1) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(form.number2) }}
+            </div>
+            
+        </div>
+        <button class="btn btn-primary">
+            Ajouter
+        </button>
+    {{ form_end(form) }}
+
+{% endblock %}

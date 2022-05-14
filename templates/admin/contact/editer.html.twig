@@ -1,0 +1,17 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Editer la page Contact{% endblock %}
+
+{% block body %}
+
+    
+
+    {{form_start(form)}}
+
+       {{ include('admin/contact/form.html.twig') }}
+        <button class="btn btn-primary">
+            Editer
+        </button>
+    {{ form_end(form) }}
+
+{% endblock %}

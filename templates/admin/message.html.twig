@@ -1,0 +1,28 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Hello MessageController!{% endblock %}
+
+{% block body %}
+{{form_start(form)}}
+
+        <div class="container">
+            <h1>Modifier les informations de la page Message</h1>
+            <div class="mb-3">
+                {{ form_row(form.email) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(form.name) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(form.suject) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(form.message) }}
+            </div>
+        </div>
+        
+        <button class="btn btn-primary">
+            Ajouter
+        </button>
+    {{ form_end(form) }}
+{% endblock %}

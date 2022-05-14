@@ -1,0 +1,35 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Acceuil{% endblock %}
+
+{% block body %}
+
+<!-- banner -->
+{% for part in acceuils %}
+
+
+    <div class="container">
+        <h1>{{part.getBannerTitle()}}</h1>
+        <p>{{part.getBannerText()}}</p>
+        <ul class="list-inline">
+          <li class="list-inline-item mx-1 my-2">
+            <a href="#" class="btn btn-primary">VTC</a>
+          </li>
+          <li >
+            <a href="#" class="btn btn-outline-primary">Livraison</a>
+          </li>
+        </ul>
+        <h1>{{part.getDescLivTitle()}}</h1>
+        <p>{{part.getDescLivText()}}</p>
+        <br>
+        <br>
+        <br>
+        <h1>{{part.getDescVtcTitle()}}</h1>
+        <p>{{part.getDescVtcText()}}</p>
+
+        <a href="{{ path('modif_acceuil', {"id": part.getId()}) }}" class="btn btn-primary">Editer</a>
+      </div>
+
+
+{% endfor %}
+{% endblock %}

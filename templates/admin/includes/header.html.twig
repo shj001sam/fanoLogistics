@@ -1,0 +1,49 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px; height: 100vh">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <img class="bi me-2" src="{{asset("assets/images/logo.png")}}" width="30" alt="Agico">
+      <span class="fs-4"> Tableau de Bord</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="{{path('admin')}}" class="nav-link text-white" aria-current="page">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+          Accueil
+        </a>
+      </li>
+      <li>
+        <a href="{{ path('admin_acceuil_home', {"id": 1 }) }}" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+          Page Accueil
+        </a>
+      </li>
+      <li>
+        <a href="{{path('admin_livraison_home')}}" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+          Page Livraison
+        </a>
+      </li>
+      <li>
+        <a href="{{path('admin_vtc_home')}}" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+          Page VTC
+        </a>
+      </li>
+      <li>
+        <a href="{{path('admin_apropos_home')}}" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+          Page Apropos
+        </a>
+      </li>
+      <li>
+        <a href="{{path('admin_contact_home')}}" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+          Page Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+
+  

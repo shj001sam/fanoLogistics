@@ -1,0 +1,25 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Acceuil{% endblock %}
+
+{% block body %}
+
+<!-- banner -->
+{% for part in contact %}
+
+
+    <div class="container">
+        
+        <h3>{{part.getAdress()}}</h3>
+        <h3>{{part.getEmail}}</h3>
+        <h3>{{part.getNumber1}}</h3>
+        <h3>{{part.getNumber2}}</h3>
+        <br>
+        <br>
+        <br>
+        <a href="{{ path('modif_acceuil', {"id": part.getId()}) }}" class="btn btn-primary">Editer</a>
+      </div>
+
+
+{% endfor %}
+{% endblock %}

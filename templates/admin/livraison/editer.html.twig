@@ -1,0 +1,17 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Editer page Livraison{% endblock %}
+
+{% block body %}
+
+    
+
+    {{form_start(form)}}
+
+       {{ include('admin/livraison/form.html.twig') }}
+        <button class="btn btn-primary">
+            Editer
+        </button>
+    {{ form_end(form) }}
+
+{% endblock %}

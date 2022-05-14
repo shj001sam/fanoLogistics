@@ -1,0 +1,47 @@
+  <!-- preloader start -->
+  <!-- preloader end -->
+
+  <div class="preloader">
+    <img src="{{asset("assets/images/preloader_ring.gif")}}" alt="preloader" class="img-fluid">
+  </div>
+
+<!-- nav part start -->
+<div class="naviagtion naviagtion-white fixed-top transition">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <a class="navbar-brand p-0" href="index-2.html"><img src="{{asset("assets/images/logo/logo.png")}}" width="100" alt="Agico"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+        aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link text-dark active text-capitalize" href="{{path('home')}}">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark text-capitalize" href="{{path('livraison_home')}}">Livraison</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark text-capitalize" href="{{path('vtc_home')}}">VTC</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark text-capitalize" href="{{path('about')}}">A propos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark text-capitalize" href="{{path('contact')}}">contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark text-capitalize" href="{{path('blog')}}">Galerie</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark text-capitalize" href="{{path('blog')}}">Blog</a>
+          </li>
+        </ul>
+        <a href="#" class="btn btn-outline-primary text-white ml-3">sign up</a>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- nav part end -->

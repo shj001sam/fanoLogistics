@@ -12,35 +12,39 @@
         <link rel="icon" href="{{asset("assets/images/logo.png")}}" type="image/x-icon">
 
         {% block stylesheets %}
-            <!-- font-awesome -->
-            <link rel="stylesheet" href="{{asset("assets/plugins/font-awesome/font-awesome.min.css")}}">
+
             <!-- Bootstrap -->
             <link rel="stylesheet" href="{{asset("assets/plugins/bootstrap/bootstrap.min.css")}}">
-            <!-- venobox -->
-            <link rel="stylesheet" href="{{asset("assets/plugins/venobox/venobox.css")}}">
-            <!-- slick -->
-            <link rel="stylesheet" href="{{asset("assets/plugins/slick/slick.css")}}">
-            <!-- AOS -->
-            <link rel="stylesheet" href="{{asset("assets/plugins/aos/aos.css")}}">
+            
+            <style>
+                .bd-placeholder-img {
+                    font-size: 1.125rem;
+                    text-anchor: middle;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    user-select: none;
+                }
 
+                @media (min-width: 768px) {
+                    .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                    }
+                }
+            </style>
             <!-- Main Stylesheet -->
-            <link href="{{asset("assets/css/style.css")}}" rel="stylesheet">
+            
         {% endblock %}
-
-        
+        <link href="{{asset("assets/css/sidebars.css")}}" rel="stylesheet">
     </head>
     <body>
 
-        {{ include("includes/header.html.twig") }}
+        <main>
+            {{ include("admin/includes/header.html.twig") }}
 
-        {% block body %}
-        
-        {% endblock %}
-
-        {{ include("includes/footer.html.twig") }}
-        
-        
-        
+            {% block body %}
+            
+            {% endblock %}
+        </main>
         
     {% block javascripts %}
         <!-- jQuery -->
@@ -57,7 +61,7 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&amp;libraries=places"></script>
         <script src="{{asset("assets/plugins/google-map/gmap.js")}}"></script>
         <!-- Main Script -->
-        <script src="{{asset("assets/js/script.js")}}"></script>
+        <script src="{{asset("assets/js/sidebars.js")}}"></script>
     {% endblock %}
     
     </body>
