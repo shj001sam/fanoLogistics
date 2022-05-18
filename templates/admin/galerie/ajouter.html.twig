@@ -1,0 +1,25 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Ajouter Information Accueil{% endblock %}
+
+{% block body %}
+<div class="container">
+    {{form_start(form)}}
+        {{ include('admin/galerie/form.html.twig') }}
+        <button class="btn btn-primary">
+            Enregistrer
+        </button>
+    {{ form_end(form) }}
+    <br>
+    <button type="button" id="add-image" class="btn btn-primary">Ajouter une image</button>
+    <br><br>
+    {{form_start(form1)}}
+        {{ include('admin/galerie/form1.html.twig') }}
+        <button class="btn btn-primary">
+            Enregistrer
+        </button>
+    {{ form_end(form1) }}
+    <br>
+    <button type="button" id="add-video" class="btn btn-primary">Ajouter une video</button>
+</div>
+{% endblock %}

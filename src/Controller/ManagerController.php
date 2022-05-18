@@ -32,9 +32,10 @@ class ManagerController extends AbstractController
     {
        $accceuil = $this->entityManager->getRepository(Acceuil::class)->findAll();
       //  dd($accceuil);
-
+      $apropos = $this->entityManager->getRepository(Apropos::class)->findAll();
         return $this->render('index.html.twig', [
-           "acceuils" => $accceuil
+           "acceuils" => $accceuil,
+           "apropos" => $apropos
         ]);
     }
 
@@ -77,42 +78,9 @@ class ManagerController extends AbstractController
        return $this->render('contact.html.twig', [
           "contact" => $contact
        ]);
-    }
+    }   
 
-
-    /**
-     * @Route("/a_propos", name="about")
-     */
-
-    public function apropos(): Response 
-    {
-      $apropos = $this->entityManager->getRepository(Apropos::class)->findAll();
-       return $this->render('about.html.twig', [
-          "apropos" => $apropos
-       ]);
-    }
     
-
-
-    /**
-     * @Route("/blog", name="blog")
-     */
-
-    public function blog(): Response 
-    {
-       return $this->render('blog/index.html.twig');
-    }
-
-
-    /**
-     * @Route("/blog/details", name="blog_detail")
-     */
-
-    public function blog_details(): Response 
-    {
-       return $this->render('blog/details.html.twig');
-    }
-
     /**
     * @Route("/admin", name="admin")
    */
@@ -120,4 +88,14 @@ class ManagerController extends AbstractController
    {
       return $this->render('admin/index.html.twig');
    }
+
+
+   /**
+     * @Route("/gallery", name="galerie")
+     */
+
+    public function galerie(): Response 
+    {
+       return $this->render('gallery/index.html.twig');
+    }   
 }

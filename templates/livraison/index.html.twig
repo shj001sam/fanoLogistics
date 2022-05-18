@@ -13,7 +13,7 @@
     <div class="row align-items-center">
       <div class="col-lg-6 text-center text-lg-left mb-4 mb-lg-0">
         <h1 class="text-dark position-relative" data-aos="zoom-in-up" data-aos-delay="1000">{{part.getBannerTitle()}}<span class="watermark">Fano</span></h1>
-        <p class="mb-4 text-dark" data-aos="zoom-in-up" data-aos-delay="1200">{{part.getBannerText()}}</p>
+        <p class="mb-4 text-dark" data-aos="zoom-in-up" data-aos-delay="1200">{{part.getBannerText()|raw}}</p>
       </div>
       <div class="col-lg-6 position-relative">
         <img src="{{asset("assets/images/banner/banner-2.png")}}" class="img-fluid w-100" alt="banner-image" data-aos="fade-left" data-aos-delay="1500">
@@ -87,16 +87,15 @@
       </div>
     </div>
     <div class="col-md-6 align-self-center pl-lg-4">
-      <p class="subtitle" data-aos="fade-up">{{part.getDescTitle()}}</p>
-      <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">Eausmod tempor magna nostrud exercitation</h2>
-      <p data-aos="fade-up" data-aos-delay="400">{{part.getDescText()}}</p>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="200">{{part.getDescTitle()}}</h2>
+      <p data-aos="fade-up" data-aos-delay="400">{{part.getDescText()|raw}}</p>
       <a class="btn btn-primary" href="#" data-aos="fade-up" data-aos-delay="600">Contact Us</a>
     </div>
   </div>
 </div>
 </section>
 <!-- about agico -->
-
+{% endfor %}
 <!-- work process -->
 <section class="section position-relative overflow-hidden">
   <div class="container">
@@ -300,7 +299,7 @@
   </div>
 </section>
 <!-- pricing -->
-{% endfor %}
+
 {# <section class="section">
   <!-- blog -->
 <div class="container">
