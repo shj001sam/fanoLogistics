@@ -13,22 +13,22 @@ body {
   line-height: 1.6;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 15px;
-  color: #8b8e93;
+  font-size: 16px;
+  color: #2e2e2e;
 }
 
 p,
 .paragraph {
   font-weight: 400;
-  color: #8b8e93;
-  font-size: 15px;
+  color: #2e2e2e;
+  font-size: 16px;
   line-height: 1.6;
   font-family: "Open Sans", sans-serif;
 }
 @media (max-width: 575px) {
   p,
 .paragraph {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
@@ -268,7 +268,7 @@ a.text-light:hover {
 }
 
 .bg-gradient-purple {
-  background: linear-gradient(180deg, #625aff 20%, #b025ef 100%);
+  background: linear-gradient(180deg, #fe6205 20%, #ff7e33ea 100%);
 }
 
 .border-gray {
@@ -1682,3 +1682,36 @@ form textarea {
   color: #fff;
 }
 /*# sourceMappingURL=maps/style.css.map */
+.description p{
+  color: white;
+  font-size: 20px;
+}
+
+.fa_acceuil{
+  background-color: #000;
+}
+
+.portfolio-menu{
+	text-align:center;
+}
+.portfolio-menu ul li{
+	display:inline-block;
+	margin:0;
+	list-style:none;
+	padding:10px 15px;
+	cursor:pointer;
+	-webkit-transition:all 05s ease;
+	-moz-transition:all 05s ease;
+	-ms-transition:all 05s ease;
+	-o-transition:all 05s ease;
+	transition:all .5s ease;
+}
+
+.portfolio-item{
+	/*width:100%;*/
+}
+.portfolio-item .item{
+	/*width:303px;*/
+	float:left;
+	margin-bottom:10px;
+}

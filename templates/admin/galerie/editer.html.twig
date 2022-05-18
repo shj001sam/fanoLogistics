@@ -1,0 +1,21 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Edition Accueil{% endblock %}
+
+{% block body %}
+<div class="container">
+    {{form_start(form)}}
+        {{ include('admin/galerie/form.html.twig') }}
+        <button class="btn btn-primary">
+            Editer
+        </button>
+    {{ form_end(form) }}
+
+    {{form_start(form1)}}
+        {{ include('admin/galerie/form1.html.twig') }}
+        <button class="btn btn-primary">
+            Editer
+        </button>
+    {{ form_end(form1) }}
+</div>
+{% endblock %}

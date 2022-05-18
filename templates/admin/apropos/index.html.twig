@@ -12,11 +12,11 @@
         
         
         <h1>{{part.getDescTitle()}}</h1>
-        <p>{{part.getDescText()}}</p>
+        <p>{{part.getDescText()|raw}}</p>
         <br>
         <br>
         <br>
-        <a href="{{ path('modif_acceuil', {"id": part.getId()}) }}" class="btn btn-primary">Editer</a>
+        <a href="{{ path('modif_apropos', {"id": part.getId()}) }}" class="btn btn-primary">Editer</a>
       </div>
 
 

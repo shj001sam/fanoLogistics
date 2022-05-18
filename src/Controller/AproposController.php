@@ -37,7 +37,7 @@ class AproposController extends AbstractController
 
 
     /**
-     * @Route("/admin/apropos", name="ajout_apropos")
+     * @Route("/admin/apropos/ajout", name="ajout_apropos")
      * @param Request $request
      * @return Response
      */
@@ -53,7 +53,7 @@ class AproposController extends AbstractController
 
             return $this->redirectToRoute('admin_apropos_home');
         }
-        return $this->render('admin/apropos/apropos.html.twig', [
+        return $this->render('admin/apropos/ajouter.html.twig', [
             "form" => $form->createView()
         ]);
     }
@@ -67,7 +67,7 @@ class AproposController extends AbstractController
     public function edit(Apropos $apropos, ManagerRegistry $doctrine, Request $request): Response
     {
         
-        $form = $this->createForm(AcceuilType::class, $apropos);
+        $form = $this->createForm(AproposType::class, $apropos);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $doctrine->getManager();
